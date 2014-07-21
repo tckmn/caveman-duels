@@ -2,6 +2,8 @@
 
 Caveman mad. Other caveman take stick but stick was for me. Caveman fight!
 
+---
+
 ## Description
 
 Caveman need sharp stick to stab other caveman. Other caveman also try to stab with sharp stick. Caveman can sharpen stick, poke with stick, or block poky sticks.
@@ -26,15 +28,21 @@ When program tell caveman what to do, output very similar to input (because cave
 
 - **`S`: sharpen**
 
-    TODO
+    When caveman sharpen, stick sharpness go up by 1 and stick gets 1 extra poke. Each poke reduce stick sharpness by 1, and if stick sharpness is 0 stick is too dull to poke. Stick sharpness starts at 0. If stick sharpness gets to 5, stick become sword! (See below.)
+    
+    If other caveman poke while sharpening, other caveman win! So be cave-ful. (Careful; caveman like making ban pun.)
     
 - **`P`: poke**
 
-    TODO
+    When caveman poke, stick sharpness go down by 1 and caveman poke enemy! If enemy sharpening, caveman win! If enemy poking, stick hits enemy stick and they both get duller by 1. If enemy blocking, nothing happen.
+    
+    If caveman poke when sharpness is 5, stick become sword and caveman *always* win! (Unless other caveman also have sword, then they both become duller.)
     
 - **`B`: block**
 
-    TODO
+    When caveman block, nothing happen when other caveman poke. If other caveman not poking, block does nothing.
+    
+    Block does not protect against sword!
     
 ## Rules and constraints
 
@@ -60,7 +68,7 @@ In your post, please include:
 
 Caveman leader wrote control code in C++, and [put it on Github repo](https://github.com/KeyboardFire/caveman-duels). You can run and test program there.
 
-Very very simple program (1 line!) is also posted in answers below.
+Very very very simple program (1 line!) is also posted in answers below.
 
 ## Scoring and leaderboard
 
