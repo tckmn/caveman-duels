@@ -14,65 +14,65 @@ Caveman lazy. Also, caveman dumb. Caveman no know what to do, so caveman need fa
 
 ## Input
 
-Caveman need to know what happened to know what to do next. Computer no have eyes, but caveman have eyes, so caveman tell program what happen and program tell caveman what to do.
+Your program's input will be a history of the events that have happened, where `S` stands for sharpen (i.e. the caveman sharpened his stick), `P` stands for poke, and `B` stands for block. The input will be a history of both sides (you and the opponent), so your and the opponenent's moves will be separated with a comma (`,`).
 
-Caveman will give program history of what happen, where `S` stand for sharpen, `P` stand for poke, and `B` stand for block. Caveman give program history of both sides, so history of caveman and history of caveman enemy will be separated by comma (`,`). Example:
+Example input:
 
     SPB,SBB
     
-This mean me sharpen, then poke, then block, and other caveman sharpen, then block, then block again.
+This means that the player sharpened his/her stick, then poked, then blocked, and the opponenet sharpened, then blocked, then blocked again.
 
 ## Output
 
-When program tell caveman what to do, output very similar to input (because caveman not very smart). Program says `S` if want caveman to sharpen, `P` for poke, and `B` for block.
+The output is very similar to the input (because the caveman is not very smart). Your program should output `S` to sharpen, `P` for poke, and `B` for block. Only the first character of output will be taken into account, and any other input will be treated as a no-op (i.e. pass).
 
 - **`S`: sharpen**
 
-    When caveman sharpen, stick sharpness go up by 1 and stick gets 1 extra poke. Each poke reduce stick sharpness by 1, and if stick sharpness is 0 stick is too dull to poke. Stick sharpness starts at 0. If stick sharpness gets to 5, stick become sword! (See below.)
+    When sharpening, the caveman's stick's sharpness goes up by 1 and the stick gets 1 extra poke. Each poke reduces the stick's sharpness by 1, and if the stick's sharpness is 0, it's too dull to poke with. Sharpness starts at 0. If sharpness gets to 5, the stick becomes a sword! (See below.)
     
-    If other caveman poke while sharpening, other caveman win! So be cave-ful. (Careful; caveman like making ban pun.)
+    If the opponenet pokes while you are sharpening, the opponent wins! So be cave-ful. (Careful; caveman like making ban puns.)
     
 - **`P`: poke**
 
-    When caveman poke, stick sharpness go down by 1 and caveman poke enemy! If enemy sharpening, caveman win! If enemy poking, stick hits enemy stick and they both get duller by 1. If enemy blocking, nothing happen.
+    When poking, the caveman's stick's sharpness goes down by 1 and you poke your opponent! If your opponent is sharpening, you win! If the opponent is poking, your stick hits your opponent's stick and they both get duller (by 1 "sharpness unit"). If the opponent is blocking, nothing happens.
     
-    If caveman poke when sharpness is 5, stick become sword and caveman *always* win! (Unless other caveman also have sword, then they both become duller.)
+    If you poke when your stick's sharpness is 5, your stick becomes a sword and you *always* win! (Unless your opponent also has a sword; in that case, they both become duller.)
     
 - **`B`: block**
 
-    When caveman block, nothing happen when other caveman poke. If other caveman not poking, block does nothing.
+    When you block, nothing happens when your opponent pokes. If your opponent is not poking, block does nothing.
     
     Block does not protect against sword!
     
 ## Rules and constraints
 
-Other things caveman must do:
+Additional rules are:
 
-- Program can read and write file in its *own* folder (no stealing!) if want to save data, but can't access anything outside of it (and caveman no have internet connection out in wilderness).
-- Caveman is fair: One program can not have code specific for other program, and 2 program can not help each other. (You can have many program, but program can't interact with other program in any way.)
-- Caveman judge not patient. If caveman take more than 100 turn each to stab other caveman, judge get bored and both caveman lose.
+- Your program can read and write files in its *own* folder (no stealing!) if you want to save data, but you can't access anything outside of it (and cavemen don't have internet connection out in the wilderness).
+- Cavemen are fair: One program can not have code specific for another program, and programs can not help each other. (You may have multiple programs, but they can't interact with each other in any way.)
+- The caveman judge is not patient. If the cavemen take more than 100 turns each to decide a winner, the judge gets bored and both cavemen lose.
 
-If program break rule or no follow specification, program disqualified, removed from `playerlist.txt`, and all duels restart from beginning. If your program disqualified, caveman leader (me!) will comment on your program's post and explain why. If no break any rule, your program be added to leaderboard. (If your program not on leaderboard, no explainy comment on your post, and you posted your program before "Last updated" time below, tell caveman leader! Maybe he forgot it.)
+If your program breaks a rule or doesn't follow the specification, the program is disqualified, removed from `playerlist.txt`, and all duels restart from the beginning. If your program is disqualified, the caveman leader (me!) will comment on your program's post and explain why. If you aren't breaking any rules, your program will be added to the leaderboard. (If your program is not on the leaderboard, there is no explanatory comment on your post, and you posted your program before the "Last updated" time below, tell the caveman leader! Maybe he forgot it.)
 
 In your post, please include:
 
 - A name.
-- A shell command to run your program (example: `java MyBot.java`, `ruby MyBot.rb`, `python3 MyBot.py`, etc.).
- - Note: input will be put after this as command line argument.
- - Caveman's computer has Ubuntu 14.04, so make sure code works (freely) on it.
-- A version number, if code works different on different version of language.
+- A shell command to run your program (ex. `java MyBot.java`, `ruby MyBot.rb`, `python3 MyBot.py`, etc.).
+ - Note: input will be appended to this as a command line argument.
+ - The cavemen use Ubuntu 14.04, so make sure your code works (freely) on it.
+- A version number, if your code works differently on different versions of your chosen language.
 - Your code (obviously).
-- How to compile code, if necessary.
+- How to compile the code, if necessary.
 
 ## Controller code / testing, example bot
 
-Caveman leader wrote control code in C++, and [put it on Github repo](https://github.com/KeyboardFire/caveman-duels). You can run and test program there.
+The caveman leader wrote the control code in C++, and [posted it on a Github repo](https://github.com/KeyboardFire/caveman-duels). You can run and test your program there.
 
-Very very very simple program (1 line!) is also posted in answers below.
+A very, *very* simple program (1 line!) is also posted in the answers below.
 
 ## Scoring and leaderboard
 
-Score is easy. Whichever caveman win get point. Caveman with most point after 10 duel against each other caveman become new caveman leader! 
+Scoring is easy. Whichever caveman wins gets a point. The caveman with the most points after 10 duels against every other caveman becomes the new caveman leader!
 
 *4 submissions are required before a real leaderboard will appear.*
 
