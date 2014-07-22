@@ -1,5 +1,5 @@
-ruby PokeBot/pokebot.rb
-ruby PokeBot/pokebot.rb
-ruby PokeBot/pokebot.rb
-ruby PokeBot/pokebot.rb
-ruby PokeBot/pokebot.rb
+ruby players/PokeBot/pokebot.rb
+ruby players/PokeBot/pokebot.rb
+ruby players/PokeBot/pokebot.rb
+ruby players/PokeBot/pokebot.rb
+ruby players/PokeBot/pokebot.rb
