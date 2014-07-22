@@ -3,9 +3,6 @@
 #define ID_SHIFT_MASK 0xFF
 #define OUT_FILE "out.txt"
 
-// this is fun because you can do "for ever"
-#define ever (;;)
-
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -87,7 +84,7 @@ int playGame(std::vector<std::string> commands, int contestants) {
 void playNextGame(std::vector<std::string> commands, std::vector<int>& duels, std::mutex& duelsMtx,
 	std::ofstream& out, std::mutex& outMtx) {
 
-	for ever {
+	for (;;) {
 		duelsMtx.lock();
 		if (duels.empty()) {
 			_finished = true;
@@ -98,10 +95,15 @@ void playNextGame(std::vector<std::string> commands, std::vector<int>& duels, st
 		duels.pop_back();
 		duelsMtx.unlock();
 
-		int winner = playGame(commands, duel);
+		std::ostringstream winners("");
+		for (int i = 0; i < 10; ++i) {
+			winners << playGame(commands, duel) << " ";
+		}
+		std::string winnersStr = winners.str();
+		winnersStr.pop_back();
 
 		outMtx.lock();
-		out << duel << " " << winner << std::endl;
+		out << duel << " " << winnersStr << std::endl;
 		outMtx.unlock();
 	}
 }
