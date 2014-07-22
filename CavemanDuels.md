@@ -28,21 +28,21 @@ The output is very similar to the input (because the caveman is not very smart).
 
 - **`S`: sharpen**
 
-    When sharpening, the caveman's stick's sharpness goes up by 1 and the stick gets 1 extra poke. Each poke reduces the stick's sharpness by 1, and if the stick's sharpness is 0, it's too dull to poke with. Sharpness starts at 0. If sharpness gets to 5, the stick becomes a sword! (See below.)
+    When sharpening, the caveman's stick's sharpness goes up by 1 and the stick gets 1 extra poke. Each poke reduces the stick's sharpness by 1, and if the stick's sharpness is 0, it's too dull to poke with. Sharpness starts at 0. If sharpness gets to 5, the stick is a sword! (See below.)
     
-    If the opponenet pokes while you are sharpening, the opponent wins! So be cave-ful. (Careful; caveman like making ban puns.)
+    If the opponenet pokes while you are sharpening, the opponent wins!
     
 - **`P`: poke**
 
-    When poking, the caveman's stick's sharpness goes down by 1 and you poke your opponent! If your opponent is sharpening, you win! If the opponent is poking, your stick hits your opponent's stick and they both get duller (by 1 "sharpness unit"). If the opponent is blocking, nothing happens.
+    When poking, the caveman's stick's sharpness goes down by 1 and you poke your opponent! If your opponent is sharpening, you win! If the opponent is poking, your stick hits your opponent's stick and they both get duller (by 1 "sharpness unit"). If the opponent is blocking, nothing happens except that your stick becomes duller.
     
-    If you poke when your stick's sharpness is 5, your stick becomes a sword and you *always* win! (Unless your opponent also has a sword; in that case, they both become duller.)
+    If you poke when your stick's sharpness is 5 or greater, your stick becomes a sword and you *always* win! (Unless your opponent also has a sword and also chose `P`; in that case, they both become duller, and may revert to sticks if their sharpness falls below 5.)
     
 - **`B`: block**
 
     When you block, nothing happens when your opponent pokes. If your opponent is not poking, block does nothing.
     
-    Block does not protect against sword!
+    Blocking does not protect against a sword, even if you also have one!
     
 ## Rules and constraints
 
