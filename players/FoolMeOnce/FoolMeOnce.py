@@ -3,7 +3,7 @@ import sys
 import random
 
 def getLastMove(player, turn):
-    path = player+str(turn)+'.txt'
+    path = 'players/FoolMeOnce/'+player+str(turn)+'.txt'
     if os.path.isfile(path):
         with open(path, 'r') as f:
             return f.read()
