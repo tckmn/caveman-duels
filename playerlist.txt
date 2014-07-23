@@ -1,5 +1,17 @@
-ruby players/PokeBot/pokebot.rb
-ruby players/PokeBot/pokebot.rb
-ruby players/PokeBot/pokebot.rb
-ruby players/PokeBot/pokebot.rb
-ruby players/PokeBot/pokebot.rb
+ruby players/PokeBot/PokeBot.rb
+ruby players/Unpredictable/Unpredictable.rb
+java -cp "players/ForeignCaveman" ForeignCaveman
+perl players/PatientWolf/PatientWolf.pl
+java -cp "players/BinaryCaveman" BinaryCaveman
+ruby players/PokeBot/PokeBot.rb
+lua players/CaveDoctor/CaveDoctor.lua
+java -cp "players/ViceLeader" ViceLeader
+python3 players/Swordmaster/Swordmaster.py
+ruby players/WoodenShield/WoodenShield.rb
+php players/Nigel/Nigel.php
+lua players/Aichmophobic/Aichmophobic.lua
+ruby players/PokeBackBot/PokeBackBot.rb
+python3 players/CavekidBlocks/CavekidBlocks.py
+python3 players/ChargerMan/ChargerMan.py
+python3 players/Trickster/Trickster.py
+python3 players/FoolMeOnce/FoolMeOnce.py

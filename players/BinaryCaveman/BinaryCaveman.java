@@ -2,9 +2,9 @@ public class BinaryCaveman {
 
     public static void main(String[] args) {
         int timelapse = 0;
-        if(args.length()>0)
+        if(args.length>0)
         {
-            timelapse = ((args.length() - 1) / 2);
+            timelapse = ((args.length - 1) / 2);
         }
         switch(timelapse % 2) 
         {
