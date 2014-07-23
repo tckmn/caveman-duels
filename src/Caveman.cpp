@@ -9,8 +9,8 @@ Caveman::Caveman(std::string cmd): cmd(cmd), lastAction('X'), actionHistory(""),
 int Caveman::provoke(Caveman& otherCaveman) {
 	getAction(actionHistory.length() ? (actionHistory + "," + otherCaveman.actionHistory) : "");
 	otherCaveman.getAction(actionHistory.length() ? (otherCaveman.actionHistory + "," + actionHistory) : "");
-	actionHistory += lastAction;
-	otherCaveman.actionHistory += otherCaveman.lastAction;
+	actionHistory += lastAction == '^' ? 'P' : lastAction;
+	otherCaveman.actionHistory += otherCaveman.lastAction == '^' ? 'P' : otherCaveman.lastAction;
 
 	maybeSharpen();
 	otherCaveman.maybeSharpen();

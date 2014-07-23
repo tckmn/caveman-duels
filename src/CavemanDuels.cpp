@@ -96,7 +96,7 @@ void playNextGame(std::vector<std::string> commands, std::vector<int>& duels, st
 		duelsMtx.unlock();
 
 		std::ostringstream winners("");
-		for (int i = 0; i < 10; ++i) {
+		for (int i = 0; i < 3; ++i) {
 			winners << playGame(commands, duel) << " ";
 		}
 		std::string winnersStr = winners.str();

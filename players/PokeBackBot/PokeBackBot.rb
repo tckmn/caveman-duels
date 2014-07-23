@@ -1,0 +1,1 @@
+puts 'SBPB'[(ARGV.shift || ',').split(',', 2)[0].length % 4]
