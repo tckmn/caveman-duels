@@ -24,7 +24,7 @@ int Caveman::provoke(Caveman& otherCaveman) {
 }
 
 void Caveman::getAction(std::string input) {
-	char DEFAULT = 'X';
+	char DEFAULT = 'B';
 
 	FILE* pipe = popen((cmd + (input.length() ? (" " + input) : "")).c_str(), "r");
 	if (!pipe) {
@@ -33,7 +33,7 @@ void Caveman::getAction(std::string input) {
 		lastAction = fgetc(pipe);
 		if (lastAction != 'S' && lastAction != 'P' && lastAction != 'B') lastAction = DEFAULT;
 		// sword
-		if (lastAction == 'S' && sharpness >= 5) lastAction = '^';
+		if (lastAction == 'P' && sharpness >= 5) lastAction = '^';
 
 		pclose(pipe);
 	}
