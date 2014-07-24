@@ -13,7 +13,9 @@ echo "Score   Player"
 paste scores.txt playerlist.txt      \
   | expand                           \
   | sed "s/^\([0-9]* *\).*[\/ ]/\1/" \
+  | sed "s/\.[^.]*$//"               \
   | sort -nr
+echo "*(this leaderboard was auto-magically generated)*"
 
 rm out2.txt
 rm scores.txt
