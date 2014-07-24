@@ -21,11 +21,11 @@ def sharpness(history):
 
 def takeTurn(choice, history, turn):
     print(choice)
-    with open('me'+str(turn)+'.txt', 'w') as f:
+    with open('players/FoolMeOnce/me'+str(turn)+'.txt', 'w') as f:
         f.write(choice)
     #also record their last choice
     choice = history[-1]
-    with open('them'+str(turn)+'.txt', 'w') as f:
+    with open('players/FoolMeOnce/them'+str(turn)+'.txt', 'w') as f:
         f.write(choice)
 
 #if its the first turn, always sharpen

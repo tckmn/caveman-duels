@@ -32,6 +32,8 @@ void Caveman::getAction(std::string input) {
 	} else {
 		lastAction = fgetc(pipe);
 		if (lastAction != 'S' && lastAction != 'P' && lastAction != 'B') lastAction = DEFAULT;
+		// blunt
+		if (lastAction == 'P' && sharpness == 0) lastAction = DEFAULT;
 		// sword
 		if (lastAction == 'P' && sharpness >= 5) lastAction = '^';
 
@@ -45,8 +47,8 @@ void Caveman::maybeSharpen() {
 	}
 }
 
-void Caveman::maybePoke(Caveman otherCaveman) {
-	if (lastAction == 'P' && sharpness > 0) {
+void Caveman::maybePoke(Caveman& otherCaveman) {
+	if (lastAction == 'P') {
 		if (otherCaveman.lastAction == 'B' || otherCaveman.lastAction == 'P' || otherCaveman.lastAction == '^') {
 			--sharpness;
 		} else {

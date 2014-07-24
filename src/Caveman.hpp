@@ -15,7 +15,7 @@ private:
 	void getAction(std::string input);
 
 	void maybeSharpen();
-	void maybePoke(Caveman otherCaveman);
+	void maybePoke(Caveman& otherCaveman);
 
 	char lastAction;
 	std::string actionHistory;
