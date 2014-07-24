@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENTRYCOUNT=17
+ENTRYCOUNT=19
 
 cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
 
