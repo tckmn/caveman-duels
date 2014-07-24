@@ -4,8 +4,8 @@ test:
 	./CavemanDuels
 	./buildscores.sh
 
-CavemanDuels: src/*.cpp src/*.hpp
-	g++ -std=c++11 src/*.cpp src/*.hpp -o CavemanDuels -pthread
+CavemanDuels: src/*.cpp
+	g++ -std=c++11 src/*.cpp -pthread -o CavemanDuels
 
 clean:
 	-rm CavemanDuels out.txt
