@@ -6,7 +6,7 @@ cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
 
 for (( i=0; i<$((ENTRYCOUNT)); i++ ))
 do
-  grep -c "\b$i\b" out2.txt >> scores.txt
+  sed "s/ /\n/g" out2.txt | grep -c "\b$i\b" >> scores.txt
 done
 
 echo "Score   Player"
