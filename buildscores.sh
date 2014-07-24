@@ -9,7 +9,11 @@ do
   grep -c "\b$i\b" out2.txt >> scores.txt
 done
 
-paste scores.txt playerlist.txt
+echo "Score   Player"
+paste scores.txt playerlist.txt      \
+  | expand                           \
+  | sed "s/^\([0-9]* *\).*[\/ ]/\1/" \
+  | sort -nr
 
 rm out2.txt
 rm scores.txt

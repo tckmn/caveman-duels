@@ -15,3 +15,6 @@ python3 players/CavekidBlocks/CavekidBlocks.py
 python3 players/ChargerMan/ChargerMan.py
 python3 players/Trickster/Trickster.py
 python3 players/FoolMeOnce/FoolMeOnce.py
+lua players/SwordLover/SwordLover.lua
+players/Swordsmith/Swordsmith
+python players/StickSharpener/StickSharpener.py
