@@ -21,3 +21,5 @@ For this purposes of this example, the bot you want to test will be called `Bott
 5. If you're running a UNIX-based / Linux system (or, although untested, probably OS X), you can execute `buildscores.sh`, which will give you a user-friendly easy-to-read chart of how all the bots performed (the same chart that is used for the leaderboard on the PPCG post).
 
     If you want to examine the raw data, open `out.txt`. Each line will have 4 numbers. The first is the battle ID. The second, third, and fourth are the player IDs of the winners of all three trials of the battle. A player's ID will be its line number in `playerlist.txt`, starting from zero (ex. the first player listed in `playerlist.txt` will have an ID of `0`). The battle ID is calculated with `playerId1 << 8 | playerId2`, where `<<` is a bit shift and `|` is bitwise OR.
+
+6. You can also use the provided `Makefile` to test. It will compile and then run the score building script to get the final result.
