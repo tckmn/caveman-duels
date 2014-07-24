@@ -17,3 +17,6 @@ python3 players/FoolMeOnce/FoolMeOnce.py
 lua players/SwordLover/SwordLover.lua
 players/Swordsmith/Swordsmith
 python players/StickSharpener/StickSharpener.py
+Rscript players/PatientBlacksmith/PatientBlacksmith.R
+python3 players/SirPokealot/SirPokealot.py
+players/Darwin/Darwin

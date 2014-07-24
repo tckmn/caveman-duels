@@ -17,12 +17,13 @@ else
   opponent=arg[1]:sub(split+1)
   psharp=stickPointy(player)
   osharp=stickPointy(opponent)
-  if osharp<1 or psharp>4 or (osharp>2 and osharp>psharp) or player:len()>95 then
+  if osharp<1 and psharp<5 then print("S")--Go for the sword
+  elseif psharp>4 or (osharp>2 and osharp>psharp) or player:len()>95 then
     if (psharp>0) then print("P")--We're losing/about to win or time's running out
     else print("S")--uh-oh
     end
   else
- amatch=false
+  amatch=false
   for x,y,z in opponent:gmatch("(B*)(S+)(B*)$") do
     if (z:len()>3 and player:sub(player:len())=="B") or (x:len()>z:len() and x:len()>0 and z:len()>0) then print("S")
     elseif z:len()==0 and y:len()>1 then print("P")--poke if there are successive sharpens
