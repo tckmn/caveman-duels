@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ENTRYCOUNT=37
+set -- `wc -l playerlist.txt`
+ENTRYCOUNT=$1
 
 cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
 
