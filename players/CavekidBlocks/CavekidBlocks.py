@@ -19,8 +19,9 @@ if len(sys.argv) > 1:
         what2do = 'Point your Stick to the adult. It may scary him.'
     else:
         what2do = 'Sharpen the Stick!'
-# Roll d20 for a fear check.
-dice = random.randint(1,20)
-if (dice == 20): what2do = 'Poke the adult! Critical Hit!'
-elif (dice <= 5 and len(sys.argv) > 1): what2do = 'Block! Block! Block!'
+
+    # Roll d20 for a courage check.
+    dice = random.randint(1,20)
+    if (dice > 15): what2do = 'Poke the adult! Critical Hit!'
+    elif (dice <= 5): what2do = 'Block! Block! Block!'
 print(what2do[0])

@@ -25,13 +25,15 @@ else
         puts 'P' # Poke, the chance that the opponent sharps now is higher than when he has more sharpness.
     elsif mySharpness > 0 && opponentSharpness == 4
         puts 'P' # It is likely that the opponent sharpens now, because he wants a sword.
+    elsif mySharpness > 4
+        puts 'P' # Me win! (hopefully...)
     elsif mySharpness == 0 && opponentSharpness == 4
         puts 'S' # Uh oh... sharpen anyway, it is unlikely, but there *is* still a small chance that the opponent will sharpen once more after he got a sword.
     elsif mySharpness > 0 && opponentSharpness > 4
         puts 'P' # Poke, just in case the opponent sharpens.
     elsif mySharpness == 0 && opponentSharpness > 4
-        puts 'S' # Sharpen anyway, for the same reasons as above.
+        puts 'S' # Sharpen anyway, for the same reasons as above. 
     else
         puts 'B' # In all other cases, block!
-    end     
+    end       
 end

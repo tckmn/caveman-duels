@@ -21,8 +21,8 @@ public class ViceLeader {
             return;
         }
 
-        // enemy blocks the whole time
-        if (isBlocker(history[1])) {
+        // enemy blocks the whole time and I didn't use this tactic on last turn
+        if (isBlocker(history[1]) && history[0].charAt(history[0].length() - 1) != 'S') {
             System.out.print("S");
             return;
         }
@@ -55,10 +55,10 @@ public class ViceLeader {
     }
 
     private static boolean isBlocker(String history) {
-        if (history.length() < 10) {
+        if (history.length() < 3) {
             return false;
         }
-        for (int i = history.length() - 1; i > history.length() - 10; i--) {
+        for (int i = history.length() - 1; i > history.length() - 3; i--) {
             if (history.charAt(i) != 'B') {
                 return false;
             }

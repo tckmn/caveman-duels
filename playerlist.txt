@@ -16,7 +16,22 @@ python3 players/Trickster/Trickster.py
 python3 players/FoolMeOnce/FoolMeOnce.py
 lua players/SwordLover/SwordLover.lua
 players/Swordsmith/Swordsmith
-python players/StickSharpener/StickSharpener.py
 Rscript players/PatientBlacksmith/PatientBlacksmith.R
 python3 players/SirPokealot/SirPokealot.py
 players/Darwin/Darwin
+players/WantASword/WantASword.out
+python3 players/MaybeMarkov/MaybeMarkov.py
+perl players/Touche/Touche.pl
+python players/FancyTechnoAlgorithm/FancyTechnoAlgorithm.py
+python players/MasterPoker/MasterPoker.py
+java -cp "players/HuddleWolfWithStick" HuddleWolfWithStick
+python players/SharpenBlockPoke/SharpenBlockPoke.py
+java -cp "players/BobCaves" BobCaves
+java -cp "players/Hodor" Hodor
+python players/Basilisk/Basilisk.py
+python players/Watcher/Watcher.py
+java -cp "players/JavaMan" JavaMan
+players/MonteCarloMan/MonteCarloMan.out
+java -cp "players/SharpMan" SharpMan
+python players/MinimaxMan/MinimaxMan.py
+nodejs players/DontPokeMe/DontPokeMe.js

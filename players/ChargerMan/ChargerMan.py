@@ -1,28 +1,44 @@
 import sys, math, random
-def count(a):
+def countSharpness(a):
     s = 0
     for i in range(len(a)):
         if a[i] == 'P': s-=1
         elif a[i] == 'S': s+=1
         if s < 0: s = 0
     return s
-me = him = []
-answer = 'S'
-if len(sys.argv) > 1:
-    me, him = sys.argv[1].split(",")
-    s_me = count( me )
-    s_him = count( him )
-
-    # Cases to attack:
-    # 1. If we have a sword.             s_me  >= 5
-    # 2. Enemy needs to sharp.           s_him == 0
-    # 3. Enemy is close to have a sword. s_him == 4
-    if (s_me >= 5 or s_him <= 0 or s_him == 4):
+def getHistory():
+    me = ""
+    him = ""
+    if len(sys.argv) > 1:
+        me, him = sys.argv[1].split(",")
+    return me,him
+if __name__ == '__main__':
+    me, him = getHistory()
+    me_s = countSharpness(me)
+    him_s = countSharpness(him)
+    answer = 'B'
+    # First Case
+    if (len(me) == 0):
+        answer = 'S'
+    # I have a sword
+    elif (me_s == 5):
         answer = 'P'
-    else:
-        # Block 80% of the time.
-        if (random.randint(1,5) == 1):
-            answer = 'S'
+    # Cant let he gets a sword
+    elif (him_s == 4):
+        answer = 'P'
+    # His sword is dull
+    elif (him_s == 0):
+        # He may try to sharp
+        # Cant attack? Sharp my stick
+        if (me_s == 0): answer = 'S'
         else:
-            answer = 'B'
-print(answer)
+            # 2/3 chance to sharp.
+            if (random.randint(0,2) != 0): answer = 'S'
+            else: answer = 'P'
+    elif (len(him) % 3 == 0):
+        # Decide what to do based on the
+        # opponent last 3 movements.
+        hist = him[-3:]
+        # Does he like to block?
+        if (hist.count('B') >= 2): answer = 'S'
+    print(answer)

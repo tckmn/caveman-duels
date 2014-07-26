@@ -1,0 +1,1 @@
+import sysargs = sys.argvif len(args) > 1:    turns_played = (len(args[1]) - 1) / 2else:    turns_played = 0print 'SBP'[turns_played % 3]
