@@ -1,5 +1,7 @@
 # Testing a bot
 
+You can also use the provided `Makefile` to test. It will compile and then run the score building script to get the final result.
+
 For this purposes of this example, the bot you want to test will be called `BottyBot`.
 
 1. Download the ZIP file for this Github repository (found at the bottom of the right sidebar) Unzip it and put it somewhere. Call it whatever you want (for this example, it will be called CavemanDuels).
@@ -14,7 +16,7 @@ For this purposes of this example, the bot you want to test will be called `Bott
 
 4. Compile the controller program. This will look something like this (on a Linux OS, assuming you start in the `CavemanDuels` directory):
 
-        g++ -std=c++11 src/*.cpp src/*.hpp -o CavemanDuels -pthread
+        g++ -std=c++11 src/*.cpp -pthread -o CavemanDuels
 
     Then, run the controller program (the executable called `CavemanDuels`). If you're testing against all submissions, this may take a while; be patient!
 
