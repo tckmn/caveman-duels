@@ -1,12 +1,13 @@
 #!/bin/bash
 
-ENTRYCOUNT=37
+set -- `wc -l playerlist.txt`
+ENTRYCOUNT=$1
 
-cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
+cut -d ' ' -f 2,3,4 out.txt > out2.txt
 
 for (( i=0; i<$((ENTRYCOUNT)); i++ ))
 do
-  sed "s/ /\n/g" out2.txt | grep -c "^$i$" >> scores.txt
+  cat out2.txt | tr ' ' $'\n' | grep -c "^$i$" >> scores.txt
 done
 
 echo "Score   Player"
