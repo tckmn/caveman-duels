@@ -3,7 +3,7 @@
 set -- `wc -l playerlist.txt`
 ENTRYCOUNT=$1
 
-cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
+cut -d ' ' -f 2,3,4 out.txt > out2.txt
 
 for (( i=0; i<$((ENTRYCOUNT)); i++ ))
 do
