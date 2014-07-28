@@ -18,6 +18,7 @@ int main(int argc, char **argv){
         else if(*p == 'P') --my_sharp;
         ++p;
     }
+    ++p;
     while(*p != 0){
         if(*p == 'S') ++opp_sharp;
         else if(*p == 'P') --opp_sharp;

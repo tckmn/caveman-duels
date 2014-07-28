@@ -1,4 +1,4 @@
-my ($me,$him) = @ARGV;
+my ($me,$him) = split(/,/,$ARGV[0]);
 if(!defined $me) {
     print "S";
     exit;

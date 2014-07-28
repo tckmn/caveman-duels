@@ -32,10 +32,9 @@ if __name__ == '__main__':
         # Cant attack? Sharp my stick
         if (me_s == 0): answer = 'S'
         else:
-            # 2/3 chance to sharp.
-            if (random.randint(0,2) != 0): answer = 'S'
+            if (random.randint(0,33) != 0): answer = 'S'
             else: answer = 'P'
-    elif (len(him) % 3 == 0):
+    elif (len(him) % 5 == 0):
         # Decide what to do based on the
         # opponent last 3 movements.
         hist = him[-3:]

@@ -34,4 +34,12 @@ java -cp "players/JavaMan" JavaMan
 players/MonteCarloMan/MonteCarloMan.out
 java -cp "players/SharpMan" SharpMan
 python players/MinimaxMan/MinimaxMan.py
-nodejs players/DontPokeMe/DontPokeMe.js
+python3 players/Entertainer/Entertainer.py
+nodejs players/Blocker/Blocker.js
+python players/Nash/Nash.py
+players/IllogicalCaveman/IllogicalCaveman.out
+players/Semipatient/Semipatient
+players/PeriodicalCavemanCicada/PeriodicalCavemanCicada.exe
+players/ModestCaveman/ModestCaveman.exe
+python -O players/MultiMarkov/MultiMarkov.py
+bash players/BashMagnon/BashMagnon.sh
