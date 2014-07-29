@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENTRYCOUNT=45
+ENTRYCOUNT=$(wc -l < playerlist.txt)
 
 cat out.txt | sed "s/^[0-9]\+ //" > out2.txt
 
