@@ -48,8 +48,8 @@ public class Hodor {
         }
 
         try{
-            //sharpen if opponent blocks 3 times in a row and I didn't just sharpen
-            if((enemyMoves[enemyMoves.length-1] == 'B') && (enemyMoves[enemyMoves.length-2] == 'B') && (enemyMoves[enemyMoves.length-3] == 'B') && (myMoves[myMoves.length-1] != 'S')){
+            //sharpen if opponent blocks 2 times in a row and I didn't just sharpen
+            if((enemyMoves[enemyMoves.length-1] == 'B') && (enemyMoves[enemyMoves.length-2] == 'B') && (myMoves[myMoves.length-1] != 'S')){
                 action = 'S';
             }
             //poke if opponent sharpens twice in a row

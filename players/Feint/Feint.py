@@ -19,19 +19,26 @@ def action(history_self, history_other):
     sharpness_other = sharpness(history_other)
     if sharpness_self >= 5:
         return 'P'
-    elif len(history_self) < 13:
-        return 'SBBSBPSBBSBPP'[len(history_self)]
-    elif 5 + 5 * sharpness_self < random.randrange(len(history_self)):
-        return 'S'
-    elif sharpness_other == 0:
-        if sharpness_self == 0 or random.randrange(sharpness_self) == 0:
+    elif len(history_self) < 2:
+        return 'SP'[len(history_self)]
+    elif history_other[1] == 'P':
+        # Fierce fight
+        if sharpness_self == 0:
             return 'S'
-        else:
+        elif history_self[-(1 + history_self.count('P'))] == 'S':
             return 'P'
-    elif sharpness_other == sharpness_self:
-        return 'P'
+        else:
+            return 'B'
     else:
-        return 'B'
+        # Smart guy
+        if sharpness_other == 1:
+            return 'B'
+        elif history_self[-1] != 'S' or history_self[-4:] == 'BSBS':
+            return 'S'
+        elif history_other.count('S') > history_other.count('B'):
+            return 'P'
+        else:
+            return 'B'
 
 if __name__ == "__main__":
     print(action(history_self, history_other))

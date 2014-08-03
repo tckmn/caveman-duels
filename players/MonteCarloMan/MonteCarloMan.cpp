@@ -57,6 +57,7 @@ int main(int argc,char * argv[])
         }
         n_turn=s1.length();
     }
+    //printf("self: %d,enemy: %d\n",self,enemy);
     int t_self,t_enemy,n_iter=1000,s_win=0,p_win=0,b_win=0;
     for (int i=0; i<n_iter; i++)
     {
@@ -113,13 +114,24 @@ pair<int,int> next_state(int s_self,int s_enemy,int player_move,int enemy_move) 
     {
          if (b==0)
          {
-            return make_pair(9001,9001);
+            if (s_self>0)
+            {
+                return make_pair(9001,9001);
+            }
+            else
+            {
+                return make_pair(-1,-1);
+            }
          }
          else if (b==1)
          {
             if (s_self>=5 && s_enemy<5)
             {
                return make_pair(9001,9001);
+            }
+            else if (s_self<=0)
+            {
+                return make_pair(-1,-1);
             }
             else
             {
@@ -133,6 +145,10 @@ pair<int,int> next_state(int s_self,int s_enemy,int player_move,int enemy_move) 
               {
                  return make_pair(9001,9001);
               }
+              else if (s_self<=0)
+                {
+                    return make_pair(-1,-1);
+                }
               else
               {
                   return make_pair(s_self-1,s_enemy);
@@ -175,7 +191,7 @@ int simulation (int s_self,int s_enemy,int n_turn)
     }
     int a=rand()%3;
     int b=rand()%3;
-    if (n_turn>=99)
+    if (n_turn>=100)
     {
        return 0;
     }
@@ -205,13 +221,24 @@ int simulation (int s_self,int s_enemy,int n_turn)
     {
          if (b==0)
          {
-            return 1;
+            if (s_self<=0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
          }
          else if (b==1)
          {
             if (s_self>=5 && s_enemy<5)
             {
                return 1;
+            }
+            else if (s_self<=0)
+            {
+                return 0;
             }
             else
             {
@@ -224,6 +251,10 @@ int simulation (int s_self,int s_enemy,int n_turn)
               if (s_self>=5)
               {
                  return 1;
+              }
+              else if (s_self<=0)
+              {
+                return 0;
               }
               else
               {

@@ -39,7 +39,7 @@ def action(history_self, history_other):
         return 'S'
     else:
         #Search for a weakness
-        for i in range(10, 1, -1):
+        for i in range(10, 2, -1):
             if history_other[-i:] == history_other[-i*2:-i]:
                 predicted_action = history_other[-i]
                 if predicted_action == 'S':

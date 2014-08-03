@@ -43,3 +43,17 @@ players/PeriodicalCavemanCicada/PeriodicalCavemanCicada.exe
 players/ModestCaveman/ModestCaveman.exe
 python -O players/MultiMarkov/MultiMarkov.py
 bash players/BashMagnon/BashMagnon.sh
+players/CarefulBot/CarefulBot
+java -cp "players/Gruntt" Gruntt
+java -cp "players/CaveMonkey" CaveMonkey
+python players/Oracle/Oracle.py
+php players/NakedEarlyNerd/NakedEarlyNerd.php
+python players/Feint/Feint.py
+python players/RegExMan/RegExMan.py
+java -cp "players/BlindFury" BlindFury
+java -cp "players/Sicillian" Sicillian
+players/PrisonRules/PrisonRules
+python players/Watson/Watson.py
+python players/SSBBP/SSBBP.py
+perl players/SpeculativeSylwester.pl
+python players/LatePokeBot/LatePokeBot.py

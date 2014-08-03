@@ -26,13 +26,13 @@ int main(int argc, char **argv){
     }
     if(opp_sharp == 0){
         if(my_sharp == 0) output('S');
-        else if(rand() % 3) output('P');
+        else if(rand() % 10 < 6) output('P');
         else output('S');
     }else if(my_sharp == 0){
-        if(rand() % 3) output('S');
+        if(rand() % 10 < 6) output('S');
         else output('B');
     }else{
-        if(rand() % 3){
+        if(rand() % 10 < 6){
             switch((-1)[q]){
                 case 'B': output('P');
                 case 'P': output('S');
@@ -45,7 +45,7 @@ int main(int argc, char **argv){
                     case 'B': output('S');
                     case 'P': output('B');
                 }
-            }else if(rand() % 3){
+            }else if(rand() % 10 < 6){
                 output('P');
             }else output('B');
         }

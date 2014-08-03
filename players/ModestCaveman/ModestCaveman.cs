@@ -36,7 +36,7 @@ namespace ModestCaveman
 
         static void Main(string[] args)
         {
-            if (args.Length < 1) Console.Write('S');
+            if (args.Length < 1) { Console.Write('S'); return; }
 
             string[] input = args[0].Split(',');
 
