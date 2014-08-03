@@ -55,5 +55,5 @@ java -cp "players/Sicillian" Sicillian
 players/PrisonRules/PrisonRules
 python players/Watson/Watson.py
 python players/SSBBP/SSBBP.py
-perl players/SpeculativeSylwester.pl
+perl players/SpeculativeSylwester/SpeculativeSylwester.pl
 python players/LatePokeBot/LatePokeBot.py
